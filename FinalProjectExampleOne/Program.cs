@@ -10,7 +10,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddDbContext<ContactsAPIDBContext>(options => options.UseInMemoryDatabase("ContactsDb"));
+// builder.Services.AddDbContext<ContactsAPIDBContext>(options => options.UseInMemoryDatabase("ContactsDb"));
+builder.Services.AddDbContext<ContactsAPIDBContext>(options => 
+    options.UseSqlServer(builder.Configuration.GetConnectionString("ContactsApiConnectionString")));
 
 var app = builder.Build();
 
@@ -28,3 +30,6 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+
+// ContactsApiConnectionString
