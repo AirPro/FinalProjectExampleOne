@@ -9,10 +9,10 @@ namespace FinalProjectExampleOne.Data
         {
 
         }
-        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Contact>? Contacts { get; set; } = null;
 
-        public DbSet<Amplifier> Amplifiers { get; set; }
-        public DbSet<Guitar> Guitars { get; set; }
-        public DbSet<Pedal> Pedals { get; set; }
+        public DbSet<Amplifier>? Amplifiers { get; set; } = null;
+        public DbSet<Guitar>? Guitars { get; set; } = null;
+        public DbSet<Pedal>? Pedals { get; set; } = null;
     }
 }

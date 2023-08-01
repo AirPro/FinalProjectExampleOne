@@ -4,6 +4,7 @@ using FinalProjectExampleOne.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinalProjectExampleOne.Migrations
 {
     [DbContext(typeof(ContactsAPIDBContext))]
-    partial class ContactsAPIDBContextModelSnapshot : ModelSnapshot
+    [Migration("20230801154548_ContactsAPIDBContext.cs")]
+    partial class ContactsAPIDBContextcs
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
