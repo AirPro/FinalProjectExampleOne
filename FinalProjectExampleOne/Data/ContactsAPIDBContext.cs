@@ -11,8 +11,8 @@ namespace FinalProjectExampleOne.Data
         }
         public DbSet<Contact> Contacts { get; set; }
 
-        // public DbSet<Amplifier> Amplifiers { get; set; }
-        // public DbSet<Guitar> Guitars { get; set; }
-        // public DbSet<Pedal> Pedals { get; set; }
+        public DbSet<Amplifier> Amplifiers { get; set; }
+        public DbSet<Guitar> Guitars { get; set; }
+        public DbSet<Pedal> Pedals { get; set; }
     }
 }
